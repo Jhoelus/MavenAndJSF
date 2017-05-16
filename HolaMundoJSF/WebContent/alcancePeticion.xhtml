@@ -16,6 +16,10 @@
 			<br/>
 			2. Alcance peticion View    <h:inputText id="cbx2" value="#{controlador.alcanceView.valor}"></h:inputText>
 			<br/><br/>
+			3. Alcance peticion Sesion  <h:inputText id="cbx3" value="#{controlador.alcanceSesion.valor}"></h:inputText>
+			<br/><br/>
+			4. Alcance peticion Aplication  <h:inputText id="cbx4" value="#{controlador.alcanceapp.valor}"></h:inputText>
+			<br/><br/>
 			<h:commandButton actionListener="#{controlador.cambiaValores}" value="actualiza" />
 			
 			<h:commandButton action="#{controlador.cambiaPagina}" value="cambia"/>
@@ -25,6 +29,10 @@
 			<span style="background: yellow;">#{alcance.valor}</span>
 			<br/>
 			<span style="background: yellow;">#{vista.valor}</span>
+			<br/>
+			<span style="background: yellow;">#{sesionB.valor}</span>
+			<br/>
+			<span style="background: yellow;">#{aplicationB.valor}</span>
 		</h:form>
 	</h:body>
 </html>
