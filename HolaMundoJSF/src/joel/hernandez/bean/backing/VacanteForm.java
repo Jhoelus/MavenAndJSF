@@ -29,6 +29,7 @@ public class VacanteForm {
 		System.out.println("Nombre" + candidato.getNombre());
 		System.out.println("Apellido" + candidato.getApellido());
 		System.out.println("Sueldo" +candidato.getSueldo());
+		System.out.println("Fecha nacimiento" +candidato.getFechaNacimiento());
 		
 		if(candidato.getNombre().equalsIgnoreCase("Gaby") &&
 				candidato.getApellido().equalsIgnoreCase("alvarez")){

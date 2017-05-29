@@ -17,21 +17,28 @@
 			
 			<table>
 			<tr>
-				<td><h:outputLabel for="name" value="Nombre: "></h:outputLabel></td>
+				<td><h:outputLabel for="name" value="#{msg['vacante.nombre']}"></h:outputLabel></td>
 				<td><h:inputText id="name" required="true" value="#{candi.nombre}"> </h:inputText></td>
 				<td><h:message for="name"></h:message></td>
 			</tr>
 			<tr>
-				<td><h:outputLabel for="ape" value="Apellido: "></h:outputLabel></td>
+				<td><h:outputLabel for="ape" value="#{msg['vacante.apellido']}"></h:outputLabel></td>
 				<td><h:inputText id="ape" value="#{candi.apellido}"> </h:inputText></td>
 				<td><h:message for="ape"></h:message></td>
 			</tr>
 			<tr>
-				<td><h:outputLabel for="sueldo" value="Sueldo deseado: "></h:outputLabel></td>
-				<td><h:inputText id="sueldo" value="#{candi.sueldo}">
+				<td><h:outputLabel for="sueldo" value="#{msg['vacante.sueldo']}" ></h:outputLabel></td>
+				<td><h:inputText id="sueldo" value="#{candi.sueldo}" required="true">
 				<f:validateLongRange minimum="500" maximum="10000" />
 				</h:inputText></td>
 				<td><h:message for="sueldo" style="color:red">jjjj</h:message></td>
+			</tr>
+			<tr>
+				<td><h:outputLabel for="fechaNacimiento: " value="#{msg['vacante.fecha']}"></h:outputLabel></td>
+				<td><h:inputText id="fechaNacimiento" required="true" value="#{candi.fechaNacimiento}">
+					<f:convertDateTime pattern="dd/MM/yyyy"/>
+				</h:inputText></td>
+				<td><h:message for="fechaNacimiento"></h:message></td>
 			</tr>
 			</table>
 			<h:commandButton value="Enviar" action="#{vacanteForm.enviar}"></h:commandButton>

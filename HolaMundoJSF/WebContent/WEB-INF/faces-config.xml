@@ -21,4 +21,14 @@
  		</navigation-case>
  	</navigation-rule>
  	
+ 	<application>
+ 		<locale-config>
+ 			<default-locale>en</default-locale>
+ 		</locale-config>
+ 		<resource-bundle>
+ 			<base-name>msgVacanteForm</base-name>
+ 			<var>msg</var>
+ 		</resource-bundle>
+ 		<message-bundle>jsf</message-bundle>
+ 	</application>
 </faces-config>

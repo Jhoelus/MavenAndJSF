@@ -1,15 +1,18 @@
 package joel.hernandez.bean.model;
 
+import java.util.Date;
+
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 
-@ManagedBean(name = "candi")
+@ManagedBean(name ="candi")
 @RequestScoped
 public class Candidato {
 	
 	private String nombre = "Ingresa nombre";
-	private String apellido = "Ingresa apellido";;
-	private double sueldo;
+	private String apellido = "Ingresa apellido";
+	private Integer sueldo;
+	private Date fechaNacimiento = new Date(); 
 	
 	public Candidato() {
 		
@@ -31,11 +34,19 @@ public class Candidato {
 		this.apellido = apellido;
 	}
 
-	public double getSueldo() {
+	public Integer getSueldo() {
 		return sueldo;
 	}
 
-	public void setSueldo(double sueldo) {
+	public void setSueldo(Integer sueldo) {
 		this.sueldo = sueldo;
+	}
+
+	public Date getFechaNacimiento() {
+		return fechaNacimiento;
+	}
+
+	public void setFechaNacimiento(Date fechaNacimiento) {
+		this.fechaNacimiento = fechaNacimiento;
 	}
 }
